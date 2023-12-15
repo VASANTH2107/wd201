@@ -40,7 +40,7 @@ describe("TodoList Test Suite", () => {
 
         const dueTodayItems = todo.dueToday();
 
-         expect(dueTodayItems.length).toBe(dueTodayItems.length);
+         expect(dueTodayItems.length).toBe(1);
 
     });
 
@@ -49,7 +49,7 @@ describe("TodoList Test Suite", () => {
         todo.add(dueLaterTodo);
 
         const dueLaterItems = todo.dueLater();
-        expect(dueLaterItems.length).toBe(dueLaterItems.length);
+        expect(dueLaterItems.length).toBe(1);
 
 
 
