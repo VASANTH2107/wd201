@@ -1,18 +1,13 @@
 {
-    "env": {
-        "browser": true,
-        "commonjs": true,
-        "es2021": true
-    },
-    "extends": "eslint:recommended",
-    "parserOptions": {
-        "ecmaVersion": "latest"
-    },
-    "rules": {},
-    "lint-staged": {
-        "*.js": [
-          "eslint",
-          "prettier --write ."
-        ]
-      }
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "rules": {}
 }
