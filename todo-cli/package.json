@@ -13,7 +13,7 @@
       "prettier --write ."
     ]
   },
-  "author": "Akash Kumar <akash.202204054@tulas.edu.in.com>",
+  "author": "vasanth kumar <21N31A0207@mrect.ac.in>",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.54.0",
