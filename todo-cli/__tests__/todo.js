@@ -35,12 +35,14 @@ describe("TodoList test suites", () => {
     expect(all.length).toBe(itemCount + 1);
   });
 
+  
   test("Checkd markinga a todo as complete", () => {
     expect(all[0].completed).toBe(false);
     markAsComplete(0);
     expect(all[0].completed).toBe(true);
   });
 
+  
   test("Checks retrival of overdue items", () => {
     const itemCount = overdue().length;
     // expect(overdue().length).toBe(itemCount)
@@ -74,7 +76,10 @@ describe("TodoList test suites", () => {
       dueDate: new Date(new Date().setDate(new Date().getDate() + 1))
         .toISOString()
         .split("T")[0],
+      
     });
     expect(dueLater().length).toBe(itemCount + 1);
+
+    
   });
 });
