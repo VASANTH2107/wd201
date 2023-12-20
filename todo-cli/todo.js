@@ -1,8 +1,13 @@
+
+
+
+
 const todoList = () => {
     all = [];
     const add = (todoItem) => {
       all.push(todoItem);
     };
+    
     const markAsComplete = (index) => {
       all[index].completed = true;
     };
@@ -24,9 +29,11 @@ const todoList = () => {
         return all.filter(item => !item.completed && new Date(item.dueDate) > today);
       }
     const toDisplayableList = (list) => {
-      // Format the To-Do list here, and return the output string
-      // as per the format given above.
+
+
+        
       return list
+          
         .map((item) => {
           let checkbox = item.completed ? "[x]" : "[ ]";
           const formattedDate =
@@ -49,9 +56,10 @@ const todoList = () => {
     };
   };
  
-  // ####################################### #
   // DO NOT CHANGE ANYTHING BELOW THIS LINE. #
-  // ####################################### #
+
+
+
   
  
 const todos = todoList();
@@ -59,6 +67,7 @@ const todos = todoList();
 const formattedDate = d => {
   return d.toISOString().split("T")[0]
 }
+
 
 var dateToday = new Date()
 const today = formattedDate(dateToday)
@@ -69,11 +78,12 @@ const tomorrow = formattedDate(
   new Date(new Date().setDate(dateToday.getDate() + 1))
 )
 
-todos.add({ title: 'Submit assignment', dueDate: yesterday, completed: false })
-todos.add({ title: 'Pay rent', dueDate: today, completed: true })
-todos.add({ title: 'Service Vehicle', dueDate: today, completed: false })
-todos.add({ title: 'File taxes', dueDate: tomorrow, completed: false })
-todos.add({ title: 'Pay electric bill', dueDate: tomorrow, completed: false })
+
+todos.add({ title: 'Submit assignment', dueDate: yesterday, completed: false  })
+todos.add({ title: 'Pay rent', dueDate: today, completed: true  })
+todos.add({ title: 'Service Vehicle', dueDate: today, completed: false  })
+todos.add({ title: 'File taxes', dueDate: tomorrow, completed: false  })
+todos.add({ title: 'Pay electric bill', dueDate: tomorrow, completed: false  })
 
 console.log("My Todo-list\n")
 
@@ -86,6 +96,7 @@ console.log("\n")
 console.log("Due Today")
 let itemsDueToday = todos.dueToday()
 let formattedItemsDueToday = todos.toDisplayableList(itemsDueToday)
+
 console.log(formattedItemsDueToday)
 console.log("\n")
 
@@ -93,6 +104,7 @@ console.log("Due Later")
 let itemsDueLater = todos.dueLater()
 let formattedItemsDueLater = todos.toDisplayableList(itemsDueLater)
 console.log(formattedItemsDueLater)
+
 console.log("\n\n")
 
 
